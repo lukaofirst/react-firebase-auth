@@ -2,17 +2,19 @@ import { useState } from 'react';
 import { FormEvent } from 'react';
 import { useRef } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
+    const navigate = useNavigate();
+
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
 
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const { signUp } = useAuth();
+    const { login } = useAuth();
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -20,9 +22,10 @@ const Login = () => {
         try {
             setError('');
             setLoading(true);
-            await signUp(emailRef.current?.value!, passwordRef.current?.value!);
+            await login(emailRef.current?.value!, passwordRef.current?.value!);
+            navigate('/');
         } catch (error) {
-            setError('Failed to create an account');
+            setError('Failed to login');
             console.log(error);
         }
 

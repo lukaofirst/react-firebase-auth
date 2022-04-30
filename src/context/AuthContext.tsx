@@ -5,6 +5,8 @@ const AuthContext = createContext<any>({
     currentUser: null,
     signUp: (email: string, password: string) =>
         auth.createUserWithEmailAndPassword(email, password),
+    login: (email: string, password: string) =>
+        auth.signInWithEmailAndPassword(email, password),
 });
 
 export function useAuth() {
@@ -19,6 +21,10 @@ const AuthProvider = ({ children }: any) => {
         return auth.createUserWithEmailAndPassword(email, password);
     }
 
+    function login(email: string, password: string) {
+        return auth.signInWithEmailAndPassword(email, password);
+    }
+
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
             setCurrentUser(user);
@@ -31,6 +37,7 @@ const AuthProvider = ({ children }: any) => {
     const value = {
         currentUser,
         signUp,
+        login,
     };
 
     return (

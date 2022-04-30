@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { FormEvent } from 'react';
 import { useRef } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const SignUp = () => {
+    const navigate = useNavigate();
+
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const confirmPasswordRef = useRef<HTMLInputElement>(null);
@@ -26,6 +28,7 @@ const SignUp = () => {
             setError('');
             setLoading(true);
             await signUp(emailRef.current?.value!, passwordRef.current?.value!);
+            navigate('/');
         } catch (error) {
             setError('Failed to create an account');
             console.log(error);
