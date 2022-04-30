@@ -12,7 +12,7 @@ const SignUp = () => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const { signUp, currentUser } = useAuth();
+    const { signUp } = useAuth();
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -38,7 +38,6 @@ const SignUp = () => {
             <Card>
                 <Card.Body>
                     <h2 className='text-center mb-4'>Sign Up</h2>
-                    {currentUser && currentUser.email}
                     {error && <Alert variant='danger'>{error}</Alert>}
                     <Form onSubmit={(e) => handleSubmit(e)}>
                         <Form.Group id='email' className='my-2'>
