@@ -7,6 +7,7 @@ const AuthContext = createContext<any>({
         auth.createUserWithEmailAndPassword(email, password),
     login: (email: string, password: string) =>
         auth.signInWithEmailAndPassword(email, password),
+    logout: () => Promise,
 });
 
 export function useAuth() {
@@ -25,6 +26,10 @@ const AuthProvider = ({ children }: any) => {
         return auth.signInWithEmailAndPassword(email, password);
     }
 
+    function logout() {
+        return auth.signOut();
+    }
+
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
             setCurrentUser(user);
@@ -38,6 +43,7 @@ const AuthProvider = ({ children }: any) => {
         currentUser,
         signUp,
         login,
+        logout,
     };
 
     return (
