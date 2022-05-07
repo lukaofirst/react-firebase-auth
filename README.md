@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+<h1>react-firebase-auth</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2><img src='https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36/country-4x3/us.png'/> ENG</h2>
 
-## Available Scripts
+-   Project that emulates the authentication process using React, TypeScript and Firebase
 
-In the project directory, you can run:
+<h3>:arrow_right: With this project you can...</h3>
 
-### `npm start`
+-   Create an account with email and password
+-   Log in with your created account
+-   Reset password
+-   Update email or password
+-   If you're not logged in, you can not access the dashboard or update profile's pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3>:arrow_right: Technologies and Concepts used in this project</h3>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-   React
+-   TypeScript
+-   Firebase
+-   Bootstrap
+-   react-router-dom (v6)
 
-### `npm test`
+<h2><img src='https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/36/country-4x3/br.png'/> PT-BR</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Projeto que emula o processo de autenticação usando React, TypeScript e Firebase
 
-### `npm run build`
+<h3>:arrow_right: Com esse projeto você pode...</h3>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Criar uma conta com email e senha
+-   Logar com a sua conta criada
+-   Resetar senha
+-   Atualizar email ou senha
+-   Se você não estiver logado, você não poderá acessar as paginas de dashboard e atualização de perfil
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3>:arrow_right: Tecnologias e Conceitos utilizados nesse projeto</h3>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   React
+-   TypeScript
+-   Firebase
+-   Bootstrap
+-   react-router-dom (v6)
